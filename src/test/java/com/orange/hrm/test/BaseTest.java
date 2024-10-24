@@ -55,12 +55,13 @@ public class BaseTest {
 //		driver.executeScript("sauce:job-result=" + jobStatus);
 //		driver.quit();
 		
-		
+		//extent report
 		ExtentReportUtils.setUpReport();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.switchTo().alert();
 		
 	}
 	
